@@ -1,0 +1,36 @@
+/* AchieveKIT primary button */
+.ak-btn {
+    -fx-background-color: #fbbf24;   /* normal */
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-min-width: 160;
+}
+
+.ak-btn:hover {
+    -fx-background-color: #f59e0b;   /* hover */
+    -fx-effect: dropshadow(gaussian, rgba(255,193,7,0.40), 15, 0, 0, 0);
+}
+
+.ak-btn:pressed {
+    -fx-background-insets: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0.2, 0, 1);
+}
+
+
+.header-btn.ak-btn {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12;
+    -fx-padding: 12 24;
+    -fx-min-width: 160;
+}
+.header-btn.ak-btn:hover {
+    -fx-background-color: #f59e0b;
+    -fx-effect: dropshadow(gaussian, rgba(255,193,7,0.40), 15, 0, 0, 0);
+}

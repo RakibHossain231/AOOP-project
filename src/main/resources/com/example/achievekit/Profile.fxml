@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.achievekit.ProfileController"
+            prefWidth="500" prefHeight="420" stylesheets="@Profile.css, @ButtonsCSS.css">
+
+    <top>
+        <HBox styleClass="top-header" alignment="CENTER_LEFT" spacing="12">
+            <Label text="👤 User Profile" styleClass="page-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backBtn" text="Back" onAction="#goBack" styleClass="ak-btn"/>
+        </HBox>
+    </top>
+
+    <center>
+        <GridPane hgap="24" vgap="14" style="-fx-padding: 24;">
+            <columnConstraints>
+                <ColumnConstraints minWidth="120"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Avatar:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label fx:id="avatarLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                   style="-fx-font-size:48px; -fx-background-radius:50; -fx-padding:12 22; -fx-background-color:#f0c040; -fx-text-fill:#111;"
+                   text="U"/>
+
+            <Label text="Full Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Label fx:id="nameLabel" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label text="Username:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label fx:id="usernameLabel" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Label fx:id="emailLabel" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+            <Label text="Joined:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <Label fx:id="joinedLabel" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+            <Label text="Status:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <Label fx:id="statusLabel" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+        </GridPane>
+    </center>
+</BorderPane>

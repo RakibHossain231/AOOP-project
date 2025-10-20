@@ -1,0 +1,464 @@
+/* StudySync Desktop Application Styles */
+
+/* Main Window */
+.main-window {
+    -fx-background-color: linear-gradient(to bottom right, #000000, #1a1a1a, #2d2d2d, #3a3a3a);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 0;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 1 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 0);
+}
+
+.sidebar-header {
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20;
+}
+
+.logo-icon {
+    -fx-font-size: 24px;
+    -fx-background-color: #fbbf24;
+    -fx-background-radius: 12;
+    -fx-padding: 8;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-alignment: center;
+}
+
+.logo-text {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.logo-subtitle {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+/* User Profile */
+.user-profile {
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20;
+}
+
+.user-avatar {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 20;
+    -fx-padding: 8;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.user-name {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.user-status {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    -fx-padding: 20 20 10 20;
+}
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 14px;
+    -fx-padding: 12 16;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-margin: 2 0;
+}
+
+.nav-item:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-border-color: #fbbf24;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-item-active {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+    -fx-border-color: #fbbf24;
+    -fx-text-fill: #fbbf24;
+    -fx-font-weight: bold;
+}
+
+.nav-separator {
+    -fx-background-color: rgba(255, 193, 7, 0.2);
+    -fx-padding: 10 0;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 10 20 20 20;
+}
+
+/* Main Content Area */
+.main-content {
+    -fx-background-color: transparent;
+}
+
+.top-header {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20 30;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.page-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 14px;
+}
+
+.header-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-padding: 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+}
+
+.header-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-text-fill: #f59e0b;
+}
+
+/* Content Scroll */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.content-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.content-scroll .scroll-bar {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+}
+
+.content-scroll .scroll-bar .thumb {
+    -fx-background-color: rgba(255, 193, 7, 0.3);
+    -fx-background-radius: 5;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    -fx-spacing: 30;
+    -fx-padding: 20 30 30 30;
+}
+
+/* Stats Grid */
+.stats-grid {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.stat-card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(255, 193, 7, 0.1);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-padding: 20;
+}
+
+.stat-card:hover {
+    -fx-translate-y: -4;
+    -fx-effect: dropshadow(gaussian, rgba(255, 193, 7, 0.25), 20, 0, 0, 8);
+}
+
+.stat-label {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+.stat-value {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.stat-icon {
+    -fx-font-size: 24px;
+}
+
+/* Feature Grid */
+.feature-grid {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.feature-card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 24;
+    -fx-border-color: rgba(255, 193, 7, 0.1);
+    -fx-border-radius: 24;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-spacing: 16;
+    -fx-alignment: center;
+    -fx-padding: 30;
+}
+
+.feature-card:hover {
+    -fx-translate-y: -4;
+    -fx-effect: dropshadow(gaussian, rgba(255, 193, 7, 0.25), 20, 0, 0, 8);
+}
+
+.feature-icon {
+    -fx-font-size: 48px;
+}
+
+.feature-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.feature-description {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 14px;
+}
+
+.feature-btn {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-min-width: 160;
+}
+
+.pomodoro-btn {
+    -fx-background-color: #fbbf24;
+}
+
+.pomodoro-btn:hover {
+    -fx-background-color: #f59e0b;
+}
+
+.task-btn {
+    -fx-background-color: #f59e0b;
+}
+
+.task-btn:hover {
+    -fx-background-color: #d97706;
+}
+
+.expense-btn {
+    -fx-background-color: #fb923c;
+}
+
+.expense-btn:hover {
+    -fx-background-color: #ea580c;
+}
+
+.chat-btn {
+    -fx-background-color: #eab308;
+}
+
+.chat-btn:hover {
+    -fx-background-color: #ca8a04;
+}
+
+/* Activity Grid */
+.activity-grid {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.activity-card, .chat-card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(255, 193, 7, 0.1);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-spacing: 16;
+    -fx-padding: 20;
+}
+
+.section-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Activity List */
+.activity-list {
+    -fx-spacing: 12;
+}
+
+.activity-item {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-radius: 8;
+    -fx-padding: 12;
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+}
+
+.activity-icon {
+    -fx-font-size: 16px;
+}
+
+.activity-text {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.activity-time {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+/* Chat Preview */
+.chat-preview {
+    -fx-spacing: 12;
+}
+
+.chat-message {
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+}
+
+.chat-avatar {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 16;
+    -fx-padding: 6;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-max-width: 32;
+    -fx-max-height: 32;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+}
+
+.chat-text {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+}
+
+.chat-time {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 10px;
+}
+
+/* Responsive adjustments */
+.main-window {
+    -fx-min-width: 1200;
+    -fx-min-height: 700;
+}
+
+/* Focus and Selection States */
+.nav-item:focused {
+    -fx-background-color: rgba(255, 193, 7, 0.2);
+    -fx-border-color: #fbbf24;
+}
+
+.feature-btn:focused {
+    -fx-effect: dropshadow(gaussian, rgba(255, 193, 7, 0.5), 10, 0, 0, 0);
+}
+
+/* Animation transitions */
+.stat-card, .feature-card {
+    -fx-transition: -fx-translate-y 0.3s ease, -fx-effect 0.3s ease;
+}
+
+.nav-item, .header-btn, .feature-btn {
+    -fx-transition: -fx-background-color 0.2s ease, -fx-text-fill 0.2s ease;
+}
+
+/* Keep sidebar colors when wrapped in a ScrollPane */
+.sidebar-scroll {
+  -fx-background-color: transparent;   /* scrollpane background */
+  -fx-padding: 0;
+}
+
+.sidebar-scroll > .viewport {
+  -fx-background-color: transparent;   /* viewport background */
+}
+
+/* Optional: slim, unobtrusive scrollbar */
+.sidebar-scroll .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+.sidebar-scroll .scroll-bar:vertical .thumb {
+  -fx-background-color: rgba(255, 204, 0, 0.35); /* light gold */
+  -fx-background-radius: 4;
+  -fx-background-insets: 0;
+}
+.sidebar-scroll .scroll-bar:vertical .track {
+  -fx-background-color: transparent;
+}
+
+/* Ensure the original sidebar visuals are not faded */
+.sidebar {
+  -fx-opacity: 1.0;
+}
+
+/* Sidebar container transparent রাখছি */
+.sidebar-scroll {
+  -fx-background-color: transparent;
+  -fx-padding: 0;
+}
+.sidebar-scroll > .viewport {
+  -fx-background-color: transparent;
+}
+
+/* স্ক্রলবারকে দৃশ্যমান করছি */
+.sidebar-scroll .scroll-bar:vertical {
+  -fx-opacity: 1.0;           /* ensure visible */
+  -fx-background-color: transparent;
+}
+.sidebar-scroll .scroll-bar:vertical .track {
+  -fx-background-color: rgba(255,255,255,0.08); /* পাতলা ট্র্যাক */
+  -fx-background-radius: 4;
+}
+.sidebar-scroll .scroll-bar:vertical .thumb {
+  -fx-background-color: #C9A227;               /* সোনালী থাম্ব */
+  -fx-background-insets: 0;
+  -fx-background-radius: 4;
+}

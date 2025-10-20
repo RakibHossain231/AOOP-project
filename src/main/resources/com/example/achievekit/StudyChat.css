@@ -1,0 +1,330 @@
+/* ===========================
+   AchieveKIT • Study Chat CSS
+   Dark + Gold tone
+   =========================== */
+
+.main-window, .root {
+    /* theme tokens */
+    -ak-bg:            #0e0f11;
+    -ak-surface:       #151618;
+    -ak-surface-2:     #1b1c1f;
+    -ak-surface-3:     #222326;
+    -ak-border:        rgba(240, 198, 84, 0.16);
+    -ak-border-strong: rgba(240, 198, 84, 0.32);
+    -ak-glow:          rgba(240, 198, 84, 0.22);
+    -ak-gold:          #d9b043;   /* primary gold */
+    -ak-gold-hi:       #f0c95f;
+    -ak-text:          #eef2f6;
+    -ak-muted:         #aeb5bb;
+    -ak-muted-2:       #8f959b;
+    -ak-danger:        #e26d5a;
+    -ak-shadow:        rgba(0, 0, 0, 0.42);
+    -ak-shadow-soft:   rgba(0, 0, 0, 0.22);
+}
+
+/* ---------- Top app bar ---------- */
+.topbar {
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-ak-surface, 8%), -ak-surface);
+    -fx-border-color: -ak-border;
+    -fx-border-width: 0 0 1 0;
+}
+.page-title {
+    -fx-text-fill: -ak-text;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0.3px;
+}
+
+/* chips / status */
+.chip {
+    -fx-background-color: #232427;
+    -fx-text-fill: -ak-gold-hi;
+    -fx-padding: 6 10;
+    -fx-background-radius: 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 12;
+}
+
+/* generic button (topbar) */
+.ak-btn {
+    -fx-background-color: -ak-surface-3;
+    -fx-text-fill: -ak-text;
+    -fx-padding: 7 12;
+    -fx-background-radius: 11;
+    -fx-font-weight: 700;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 11;
+}
+.ak-btn:hover { -fx-background-color: derive(-ak-surface-3, 8%); }
+.ak-btn:armed { -fx-background-color: derive(-ak-surface-3, 16%); }
+
+/* ---------- Card shell ---------- */
+.page-wrap {
+    -fx-background-color:
+        linear-gradient(to bottom right,
+            rgba(240,198,84,0.055),
+            transparent 50%,
+            rgba(240,198,84,0.05));
+    -fx-padding: 18;
+}
+.chat-card {
+    -fx-background-color:
+        linear-gradient(to bottom, -ak-surface-2, -ak-surface);
+    -fx-background-radius: 18;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 18;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, -ak-shadow, 20, 0.28, 0, 8);
+}
+
+/* room info strip */
+.roombar {
+    -fx-background-color: rgba(240,198,84,0.07);
+    -fx-border-color: -ak-border;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 18 18 0 0;
+}
+.muted { -fx-text-fill: -ak-muted; }
+
+/* ---------- Scroll + container ---------- */
+.content-scroll { -fx-background-color: transparent; }
+.scroll-pane .viewport { -fx-background-color: transparent; }
+
+.messages-box {
+    -fx-padding: 18 22 26 22;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(240,198,84,0.65);
+    -fx-background-radius: 6;
+}
+.scroll-bar:vertical .track {
+    -fx-background-color: rgba(240,198,84,0.12);
+    -fx-background-radius: 6;
+}
+
+/* ---------- Message bubbles ---------- */
+.msg-row { -fx-padding: 3 0; }
+
+.bubble {
+    -fx-background-radius: 16;
+    -fx-padding: 10 12;
+    -fx-effect: dropshadow(gaussian, -ak-shadow-soft, 14, 0.35, 0, 4);
+    -fx-max-width: 620;
+}
+
+.bubble-me {
+    -fx-background-color: -ak-gold;
+    -fx-text-fill: #151515;
+}
+.bubble-you {
+    -fx-background-color: #202225;
+    -fx-text-fill: -ak-text;
+    -fx-border-color: -ak-border-strong;
+    -fx-border-radius: 16;
+}
+
+/* main message text — bold and clear */
+.bubble .body {
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;            /* <- bold */
+    -fx-line-spacing: 2px;
+    -fx-wrap-text: true;
+    -fx-text-fill: inherit;
+}
+
+/* timestamp / meta */
+.meta {
+    -fx-font-size: 11.5px;
+    -fx-padding: 5 6 0 6;
+    -fx-font-weight: 700;
+    -fx-opacity: .95;
+}
+.bubble-me .meta { -fx-text-fill: #2a2106; }
+.bubble-you .meta { -fx-text-fill: #cfd3d9; }
+
+/* system lines (join/leave) */
+.label.meta {
+    -fx-background-color: transparent;
+    -fx-text-fill: -ak-muted-2;
+}
+
+/* ---------- Composer ---------- */
+.composer {
+    -fx-background-color: rgba(240,198,84,0.06);
+    -fx-border-color: -ak-border;
+    -fx-border-width: 1 0 0 0;
+    -fx-background-radius: 0 0 18 18;
+}
+
+/* text input */
+.composer .text-field {
+    -fx-background-color: #1e2023, #131416;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 14, 13;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 14;
+    -fx-padding: 11 14;
+    -fx-text-fill: -ak-text;
+    -fx-prompt-text-fill: -ak-muted;
+    -fx-highlight-fill: -ak-gold-hi;
+    -fx-highlight-text-fill: #191919;
+}
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, -ak-glow, 10, 0.35, 0, 0);
+    -fx-border-color: -ak-border-strong;
+}
+
+/* send button */
+.send-btn {
+    -fx-background-color:
+       linear-gradient(to bottom, -ak-gold-hi, -ak-gold);
+    -fx-text-fill: #191919;
+    -fx-font-weight: 900;
+    -fx-padding: 10 18;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, -ak-shadow, 16, 0.38, 0, 3);
+    -fx-cursor: hand;
+}
+.send-btn:hover { -fx-opacity: .95; }
+.send-btn:armed { -fx-translate-y: 0.5; }
+.send-btn:disabled {
+    -fx-background-color: #5a4a21;
+    -fx-text-fill: #cfcfcf;
+    -fx-effect: null;
+    -fx-opacity: .6;
+}
+
+/* ---------- Dialog / Picker polish ---------- */
+.dialog-pane, .dialog-pane:header .header-panel, .alert, .tooltip {
+    -fx-background-color: -ak-surface-2;
+    -fx-border-color: -ak-border;
+    -fx-border-width: 1;
+    -fx-text-fill: -ak-text;
+}
+.dialog-pane .label, .tooltip { -fx-text-fill: -ak-text; }
+
+/* ListView items (course picker) */
+.list-view {
+    -fx-background-color: -ak-surface;
+    -fx-border-color: -ak-border;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -ak-text;
+    -fx-padding: 8 10;
+    -fx-cell-size: 32px;
+}
+.list-cell:filled:selected, .list-cell:filled:selected:hover {
+    -fx-background-color: rgba(240,198,84,0.22);
+    -fx-text-fill: -ak-text;
+}
+.list-cell:filled:hover {
+    -fx-background-color: rgba(240,198,84,0.10);
+}
+
+/* ComboBox/Popup (if used) */
+.combo-box, .choice-box, .menu-button {
+    -fx-background-color: -ak-surface-3;
+    -fx-text-fill: -ak-text;
+    -fx-border-color: -ak-border;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+.context-menu, .menu-item, .combo-box-popup > .list-view {
+    -fx-background-color: -ak-surface-2;
+    -fx-text-fill: -ak-text;
+    -fx-border-color: -ak-border;
+}
+
+/* ---------- Misc ---------- */
+.label { -fx-text-fill: -ak-text; }
+.button { -fx-text-fill: -ak-text; }
+.separator *.line { -fx-background-color: -ak-border; }
+
+/* window rounded feel for the inner card edges */
+.border-pane, .stack-pane, .vbox, .hbox { -fx-background-color: transparent; }
+
+/* make small focus ring on clickable items */
+.button:focused, .list-view:focused, .text-field:focused {
+    -fx-effect: dropshadow(gaussian, -ak-glow, 8, 0.35, 0, 0);
+}
+
+/* ===== Picker/Dialog polish (override) ===== */
+.dialog-root {
+    -fx-background-color: linear-gradient(to bottom, #1b1c1f, #151618);
+    -fx-border-color: rgba(240,198,84,0.16);
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+.dialog-root > .label {
+    -fx-text-fill: -ak-muted;
+    -fx-font-weight: 700;
+    -fx-padding: 0 2 4 2;
+}
+
+.list-view {
+    -fx-background-color: -ak-surface;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: -ak-border;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -ak-text;
+    -fx-padding: 10 12;
+    -fx-cell-size: 34px;
+}
+.list-cell:odd  { -fx-background-color: #181a1d; }
+.list-cell:even { -fx-background-color: #1d1f22; }
+.list-cell:filled:selected,
+.list-cell:filled:selected:hover {
+    -fx-background-color: rgba(240,198,84,0.22);
+    -fx-text-fill: -ak-text;
+}
+.list-cell:filled:hover {
+    -fx-background-color: rgba(240,198,84,0.10);
+}
+
+/* Dialog buttons */
+.primary-btn {
+    -fx-background-color: linear-gradient(to bottom, -ak-gold-hi, -ak-gold);
+    -fx-text-fill: #171717;
+    -fx-font-weight: 900;
+    -fx-background-radius: 12;
+    -fx-padding: 8 16;
+    -fx-effect: dropshadow(gaussian, -ak-shadow, 14, 0.35, 0, 3);
+}
+.ghost-btn {
+    -fx-background-color: -ak-surface-3;
+    -fx-text-fill: -ak-text;
+    -fx-border-color: -ak-border;
+    -fx-background-radius: 12;
+    -fx-padding: 8 14;
+}
+.primary-btn:hover { -fx-opacity: .95; }
+.ghost-btn:hover   { -fx-background-color: derive(-ak-surface-3, 6%); }
+
+/* Chat header cosmetics */
+.course-head {
+    -fx-text-fill: -ak-text;
+    -fx-font-weight: 900;
+    -fx-letter-spacing: .2px;
+}
+.badge {
+    -fx-background-color: #232427;
+    -fx-text-fill: -ak-gold-hi;
+    -fx-padding: 6 10;
+    -fx-background-radius: 12;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 12;
+}

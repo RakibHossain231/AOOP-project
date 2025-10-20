@@ -1,0 +1,973 @@
+/* Pomodoro Page CSS (merged with homepage styles for consistency) */
+/* Main Window */
+/* test test test */
+/* test test test */
+.main-window {
+    -fx-background-color: linear-gradient(to bottom right, #000000, #1a1a1a, #2d2d2d, #3a3a3a);
+    -fx-min-width: 1200;
+    -fx-min-height: 700;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 0;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 1 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 0);
+}
+
+.sidebar-header {
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20;
+}
+
+.logo-icon {
+    -fx-font-size: 24px;
+    -fx-background-color: #fbbf24;
+    -fx-background-radius: 12;
+    -fx-padding: 8;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-alignment: center;
+}
+
+.logo-text {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.logo-subtitle {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+/* User Profile */
+.user-profile {
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20;
+}
+
+.user-avatar {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 20;
+    -fx-padding: 8;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.user-name {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.user-status {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    -fx-padding: 20 20 10 20;
+}
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 14px;
+    -fx-padding: 12 16;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-margin: 2 0;
+}
+
+.nav-item:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-border-color: #fbbf24;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-item-active {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+    -fx-border-color: #fbbf24;
+    -fx-text-fill: #fbbf24;
+    -fx-font-weight: bold;
+}
+
+.nav-separator {
+    -fx-background-color: rgba(255, 193, 7, 0.2);
+    -fx-padding: 10 0;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 10 20 20 20;
+}
+
+/* Main Content */
+.main-content {
+    -fx-background-color: transparent;
+}
+
+.top-header {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20 30;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.page-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 14px;
+}
+
+.header-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-padding: 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+}
+
+.header-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-text-fill: #f59e0b;
+}
+
+/* Content Scroll */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.content-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.content-scroll .scroll-bar {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+}
+
+.content-scroll .scroll-bar .thumb {
+    -fx-background-color: rgba(255, 193, 7, 0.3);
+    -fx-background-radius: 5;
+}
+
+/* Pomodoro Content */
+.pomodoro-content {
+    -fx-spacing: 30;
+    -fx-padding: 20 30 30 30;
+}
+
+/* Timer Section */
+.timer-section {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 24;
+    -fx-border-color: rgba(255, 193, 7, 0.15);
+    -fx-border-radius: 24;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 3);
+    -fx-spacing: 25;
+    -fx-padding: 40 30 40 30;
+}
+
+.session-type {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.session-number {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 14px;
+}
+
+.timer-text {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-effect: dropshadow(gaussian, rgba(251, 191, 36, 0.3), 10, 0, 0, 0);
+}
+
+.timer-progress {
+    -fx-pref-height: 12;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 6;
+}
+
+.timer-progress .bar {
+    -fx-background-color: linear-gradient(to right, #fbbf24, #f59e0b);
+    -fx-background-radius: 6;
+}
+
+/* Timer Controls */
+.timer-btn {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 25;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-min-width: 120;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 2);
+}
+
+.start-btn {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000000;
+}
+
+.start-btn:hover {
+    -fx-background-color: #f59e0b;
+}
+
+.stop-btn {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+    -fx-text-fill: #fbbf24;
+    -fx-border-color: #fbbf24;
+    -fx-border-width: 1;
+}
+
+.stop-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.25);
+    -fx-text-fill: #ffffff;
+}
+
+.reset-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: #9ca3af;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+}
+
+.reset-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-text-fill: #fbbf24;
+}
+
+/* Session Controls */
+.control-btn {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 12px;
+    -fx-padding: 8 15;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 193, 7, 0.3);
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.control-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.2);
+    -fx-text-fill: #f59e0b;
+}
+
+/* Stats Section */
+.stats-section {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-padding: 0 30 0 30;
+}
+
+.focus-stat-card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(255, 193, 7, 0.1);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-spacing: 12;
+    -fx-alignment: center;
+}
+
+.focus-stat-card:hover {
+    -fx-translate-y: -3;
+    -fx-effect: dropshadow(gaussian, rgba(255, 193, 7, 0.2), 15, 0, 0, 5);
+}
+
+.stat-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.stat-value-large {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.stat-subtitle {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+}
+
+.goal-progress {
+    -fx-pref-height: 8;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 4;
+}
+
+.goal-progress .bar {
+    -fx-background-color: linear-gradient(to right, #fbbf24, #f59e0b);
+    -fx-background-radius: 4;
+}
+
+.goal-text {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 11px;
+}
+
+/* History Section */
+.history-section {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(255, 193, 7, 0.1);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-spacing: 15;
+}
+
+.section-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.session-table {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.session-table .column-header-background {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-background-radius: 12 12 0 0;
+}
+
+.session-table .column-header {
+    -fx-text-fill: #fbbf24;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 0 1 0 0;
+}
+
+.session-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 193, 7, 0.1);
+    -fx-border-width: 0 0 1 0;
+}
+
+.session-table .table-row-cell:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.05);
+}
+
+.session-table .table-row-cell:selected {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+}
+
+.session-table .table-cell {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 8;
+}
+
+.session-table .table-cell:selected {
+    -fx-text-fill: #ffffff;
+}
+
+/* Quick Settings */
+.quick-settings {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(255, 193, 7, 0.08);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-spacing: 30;
+    -fx-padding: 25;
+}
+
+.setting-label {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.time-display {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 60;
+    -fx-alignment: center;
+}
+
+.time-adjust-btn {
+    -fx-background-color: rgba(255, 193, 7, 0.1);
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+.time-adjust-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.2);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.auto-start-checkbox {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 12px;
+}
+
+.auto-start-checkbox:selected .box {
+    -fx-background-color: #fbbf24;
+    -fx-border-color: #fbbf24;
+}
+
+.auto-start-checkbox:selected .mark {
+    -fx-background-color: #000000;
+}
+
+
+/* Keep sidebar colors when wrapped in a ScrollPane */
+.sidebar-scroll {
+  -fx-background-color: transparent;   /* scrollpane background */
+  -fx-padding: 0;
+}
+
+.sidebar-scroll > .viewport {
+  -fx-background-color: transparent;   /* viewport background */
+}
+
+/* Optional: slim, unobtrusive scrollbar */
+.sidebar-scroll .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+.sidebar-scroll .scroll-bar:vertical .thumb {
+  -fx-background-color: rgba(255, 204, 0, 0.35); /* light gold */
+  -fx-background-radius: 4;
+  -fx-background-insets: 0;
+}
+.sidebar-scroll .scroll-bar:vertical .track {
+  -fx-background-color: transparent;
+}
+
+/* Ensure the original sidebar visuals are not faded */
+.sidebar {
+  -fx-opacity: 1.0;
+}
+
+/* Sidebar container transparent রাখছি */
+.sidebar-scroll {
+  -fx-background-color: transparent;
+  -fx-padding: 0;
+}
+.sidebar-scroll > .viewport {
+  -fx-background-color: transparent;
+}
+
+/* স্ক্রলবারকে দৃশ্যমান করছি */
+.sidebar-scroll .scroll-bar:vertical {
+  -fx-opacity: 1.0;           /* ensure visible */
+  -fx-background-color: transparent;
+}
+.sidebar-scroll .scroll-bar:vertical .track {
+  -fx-background-color: rgba(255,255,255,0.08); /* পাতলা ট্র্যাক */
+  -fx-background-radius: 4;
+}
+.sidebar-scroll .scroll-bar:vertical .thumb {
+  -fx-background-color: #C9A227;               /* সোনালী থাম্ব */
+  -fx-background-insets: 0;
+  -fx-background-radius: 4;
+}
+
+/* ===============================
+   🌟 Pomodoro Pro UI Enhancements
+   =============================== */
+
+/* Pomodoro Card (the timer box) */
+.pomodoro-card {
+    -fx-background-color: linear-gradient(to bottom right, #1c1c1c, #2a2a2a);
+    -fx-border-color: #fbbf24;
+    -fx-border-width: 1;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-padding: 25 30;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.25), 15, 0.3, 0, 3);
+}
+
+/* Task Bar and Selector */
+.task-bar {
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+.task-label {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.task-combobox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #fbbf24;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-font-size: 13px;
+}
+
+.task-combobox .list-cell:hover {
+    -fx-background-color: rgba(0, 0, 0, 1);
+    -fx-text-fill: #e3d432;
+}
+
+/* Current Task Box */
+.current-task-box {
+    -fx-padding: 5 10 10 10;
+    -fx-alignment: center;
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255, 193, 7, 0.15);
+    -fx-border-radius: 10;
+}
+
+.current-task-header {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.current-task-name {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.4), 10, 0.4, 0, 0);
+}
+
+/* Main Timer */
+.timer-text {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-effect: dropshadow(gaussian, rgba(251, 191, 36, 0.5), 15, 0.6, 0, 0);
+}
+
+.session-type {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.session-number {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 13px;
+}
+
+/* Progress Bar */
+.timer-progress {
+    -fx-pref-height: 10;
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-background-radius: 5;
+}
+.timer-progress .bar {
+    -fx-background-color: linear-gradient(to right, #fbbf24, #f59e0b);
+    -fx-background-radius: 5;
+}
+
+/* Main Buttons */
+.main-btn {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-min-width: 100;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0.2, 0, 1);
+    -fx-transition: 0.3s;
+}
+
+.main-btn:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.start-btn {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000;
+}
+
+.start-btn:hover {
+    -fx-background-color: #f59e0b;
+}
+
+.stop-btn {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+    -fx-text-fill: #fbbf24;
+    -fx-border-color: #fbbf24;
+    -fx-border-width: 1;
+}
+
+.reset-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-text-fill: #9ca3af;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+}
+
+.skip-btn {
+    -fx-background-color: rgba(255, 193, 7, 0.12);
+    -fx-text-fill: #fbbf24;
+    -fx-border-color: rgba(255, 193, 7, 0.4);
+}
+
+.skip-btn:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.25);
+}
+
+/* Quick Settings Enhancements */
+.quick-settings {
+    -fx-background-color: rgba(255,255,255,0.04);
+    -fx-border-color: rgba(255,193,7,0.1);
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+}
+
+.setting-label {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.time-display {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.time-adjust-btn {
+    -fx-background-color: rgba(255,193,7,0.1);
+    -fx-text-fill: #fbbf24;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+    -fx-cursor: hand;
+}
+
+.time-adjust-btn:hover {
+    -fx-background-color: rgba(255,193,7,0.25);
+    -fx-text-fill: #000;
+}
+
+/* History Section */
+.history-section {
+    -fx-background-color: rgba(255,255,255,0.03);
+    -fx-border-color: rgba(255,193,7,0.1);
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 15 20;
+}
+
+.section-title {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.small-btn {
+    -fx-background-color: rgba(255,193,7,0.1);
+    -fx-text-fill: #fbbf24;
+    -fx-font-weight: bold;
+    -fx-padding: 5 12;
+    -fx-background-radius: 6;
+}
+
+.small-btn:hover {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000;
+}
+
+/* Table */
+.session-table {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255,193,7,0.15);
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+.session-table .column-header-background {
+    -fx-background-color: rgba(255,193,7,0.08);
+}
+.session-table .column-header {
+    -fx-text-fill: #fbbf24;
+    -fx-font-weight: bold;
+}
+.session-table .table-row-cell:hover {
+    -fx-background-color: rgba(255,193,7,0.07);
+}
+.session-table .table-row-cell:selected {
+    -fx-background-color: rgba(255,193,7,0.18);
+}
+/* ===============================
+   Group Task ListView Fix
+   =============================== */
+
+#groupTaskListView {
+    -fx-background-color: #1a1a1a;
+    -fx-border-color: #fbbf24;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+#groupTaskListView .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;
+    -fx-padding: 6 10;
+    -fx-font-size: 13px;
+}
+
+#groupTaskListView .list-cell:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+#groupTaskListView .list-cell:selected {
+    -fx-background-color: rgba(255, 193, 7, 0.3);
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+/* ===============================
+   🎯 Align Select Task and Group Task Mode Headers
+   =============================== */
+#selectTaskSection, #groupTaskSection {
+    -fx-alignment: top-left;
+    -fx-spacing: 8;
+}
+
+#selectTaskSection .label, #groupTaskSection .label {
+    -fx-alignment: baseline-left;
+    -fx-padding: 0 0 5 0;
+}
+
+/* Optional fine-tune if it sits slightly low */
+#selectTaskSection {
+    -fx-translate-y: 2;
+}
+/* ===============================
+   🍅 ComboBox - EXACT Match with Group Task Mode
+   =============================== */
+
+.task-combobox {
+    -fx-background-color: #1a1a1a;         /* same dark fill */
+    -fx-border-color: #fbbf24;             /* same gold border */
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: #d1d5db;                /* light gray text */
+    -fx-prompt-text-fill: #9ca3af;         /* subtle placeholder gray */
+    -fx-font-size: 13px;
+}
+
+/* Dropdown list background */
+.task-combobox .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;
+    -fx-padding: 6 10;
+    -fx-font-size: 13px;
+}
+
+/* Hover effect - same as Group Task Mode */
+.task-combobox .list-cell:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.15); /* soft gold hover */
+    -fx-text-fill: #ffffff;                        /* white text on hover */
+    -fx-cursor: hand;
+}
+
+/* Selected item - same as Group Task Mode */
+.task-combobox .list-cell:selected {
+    -fx-background-color: rgba(255, 193, 7, 0.3);  /* gold highlight */
+    -fx-text-fill: #000000;                        /* black text for contrast */
+    -fx-font-weight: bold;
+}
+
+/* Dropdown background area */
+.task-combobox .list-view {
+    -fx-background-color: #1a1a1a;
+    -fx-border-color: #fbbf24;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* Scrollbar style (gold accent) */
+.task-combobox .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.task-combobox .scroll-bar:vertical .thumb {
+    -fx-background-color: #fbbf24;
+    -fx-background-radius: 4;
+}
+
+.task-combobox .scroll-bar:vertical .track {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 4;
+}
+/* =========================================
+   📊 Make Table Headers & Cells Clearly Visible
+   (put this AT THE BOTTOM of the CSS file)
+   ========================================= */
+
+/* Header background */
+.session-table .column-header-background {
+    -fx-background-color: rgba(255, 193, 7, 0.08);
+}
+
+/* Header cell + the LABEL inside it (this is the key) */
+.session-table .column-header,
+.session-table .column-header .label {
+    -fx-text-fill: #ffffff;       /* bright white header text */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-opacity: 1.0;             /* ensure no fading */
+}
+
+/* Optional: header sort arrow color for visibility */
+.session-table .column-header .arrow,
+.session-table .column-header .sort-order-dot {
+    -fx-background-color: #fbbf24;
+}
+
+/* Body rows */
+.session-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 193, 7, 0.12);
+    -fx-border-width: 0 0 1 0;
+}
+
+.session-table .table-row-cell:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.08);
+}
+
+.session-table .table-row-cell:selected {
+    -fx-background-color: rgba(255, 193, 7, 0.25);
+}
+
+/* Body cell text */
+.session-table .table-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #eaeaea;       /* clear, readable light text */
+    -fx-font-size: 12px;
+    -fx-padding: 6 10;
+}
+.session-table .table-cell:selected {
+    -fx-text-fill: #000000;       /* black on gold selection */
+    -fx-font-weight: bold;
+}
+
+/* Corner / filler areas (keeps theme consistent) */
+.session-table .filler,
+.session-table .column-header-background .filler {
+    -fx-background-color: rgba(255, 193, 7, 0.08);
+}
+
+/* ===============================
+   🍅 ComboBox Dropdown Match - Group Task Mode
+   =============================== */
+
+.task-combobox {
+    -fx-background-color: #1a1a1a;
+    -fx-border-color: #fbbf24;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #9ca3af;
+    -fx-font-size: 13px;
+}
+
+/* Dropdown popup list (when opened) */
+.task-combobox .list-view {
+    -fx-background-color: #1a1a1a;  /* same black background as group task box */
+    -fx-border-color: #fbbf24;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-height: 160;            /* ✅ same height as right box */
+    -fx-pref-width: 240;             /* matches right box width */
+}
+
+/* Dropdown list items */
+.task-combobox .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d1d5db;
+    -fx-padding: 6 10;
+    -fx-font-size: 13px;
+}
+
+/* Hover (gold tint with white text, same as Group Task Mode) */
+.task-combobox .list-cell:hover {
+    -fx-background-color: rgba(255, 193, 7, 0.15);
+    -fx-text-fill: #ffffff;
+}
+
+/* Selected (gold highlight with black text) */
+.task-combobox .list-cell:selected {
+    -fx-background-color: rgba(255, 193, 7, 0.3);
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+/* Scrollbar styling */
+.task-combobox .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.task-combobox .scroll-bar:vertical .thumb {
+    -fx-background-color: #fbbf24;
+    -fx-background-radius: 4;
+}
+
+.task-combobox .scroll-bar:vertical .track {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 4;
+}

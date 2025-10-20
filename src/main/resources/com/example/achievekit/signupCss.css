@@ -1,0 +1,90 @@
+/* ---------- Global ---------- */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #0d0d10, #1a1a20);
+    -fx-font-family: "Segoe UI", "Inter", "Roboto", sans-serif;
+    -fx-text-fill: #eaeaea;
+}
+
+/* ভিতরের gap/space একটু আরামদায়ক লাগে */
+.vbox {
+    -fx-spacing: 14;
+}
+
+/* ---------- Header / Branding ---------- */
+#signupLogo {
+    /* "AK" গোল ব্যাজ */
+    -fx-background-color: #ffcc33;
+    -fx-background-radius: 999;
+    -fx-padding: 10 14;
+    -fx-text-fill: #0d0d10;
+    -fx-font-weight: 800;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.55), 12, 0.3, 0, 2);
+}
+
+#signupTitle {
+    -fx-text-fill: #ffcc33;
+    -fx-font-size: 26px;
+    -fx-font-weight: 900;
+}
+
+#signupSubtitle {
+    -fx-text-fill: #a7a7a7;
+    -fx-font-size: 13px;
+}
+
+/* ---------- Inputs ---------- */
+.text-field, .password-field {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-border-color: #d4a514;
+    -fx-border-radius: 10;
+    -fx-border-width: 1.2;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #9a9a9a;
+    -fx-padding: 12 14;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #ffcc33;
+    -fx-effect: dropshadow(gaussian, rgba(255,204,51,0.35), 8, 0.35, 0, 0);
+}
+
+/* ---------- Divider ---------- */
+#divider {
+    -fx-fill: rgba(255,255,255,0.08);
+    -fx-arc-width: 8;
+    -fx-arc-height: 8;
+    /* NOTE: divider দেখা না গেলে FXML-এ height/width দিন (e.g., height="2" width="300") */
+}
+
+/* ---------- Buttons ---------- */
+#signupBtn {
+    -fx-background-color: #ffcc33;
+    -fx-text-fill: #151515;
+    -fx-font-weight: 800;
+    -fx-background-radius: 22;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+#signupBtn:hover   { -fx-background-color: #ffd85e; }
+#signupBtn:pressed { -fx-background-color: #e3b423; }
+
+#cancelBtn {
+    /* link-style secondary button */
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffcc33;
+    -fx-font-weight: 700;
+    -fx-padding: 6 8;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+#cancelBtn:hover   { -fx-text-fill: #ffd85e; }
+#cancelBtn:pressed { -fx-text-fill: #e3b423; }
+
+/* ---------- Small tweaks ---------- */
+.label {
+    -fx-text-fill: #eaeaea;
+}

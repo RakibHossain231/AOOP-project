@@ -1,0 +1,180 @@
+AchieveKit/
+└── AchieveKit/
+│   ├── .gitignore
+│   ├── Database.docx
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── project_tree.txt
+│   ├── ~$tabase.docx
+│   └── .idea/
+│   │   ├── .gitignore
+│   │   ├── compiler.xml
+│   │   ├── encodings.xml
+│   │   ├── jarRepositories.xml
+│   │   ├── material_theme_project_new.xml
+│   │   ├── misc.xml
+│   │   ├── workspace.xml
+│   └── src/
+│   │   └── main/
+│   │   │   └── java/
+│   │   │   │   ├── module-info.java
+│   │   │   │   └── com/
+│   │   │   │   │   └── example/
+│   │   │   │   │   │   └── achievekit/
+│   │   │   │   │   │   │   ├── AuthService.java
+│   │   │   │   │   │   │   ├── DB.java
+│   │   │   │   │   │   │   ├── Expense.java
+│   │   │   │   │   │   │   ├── ExpenseDAO.java
+│   │   │   │   │   │   │   ├── ForgotPasswordController.java
+│   │   │   │   │   │   │   ├── HelloApplication.java
+│   │   │   │   │   │   │   ├── HelloController.java
+│   │   │   │   │   │   │   ├── HomeController.java
+│   │   │   │   │   │   │   ├── LoginController.java
+│   │   │   │   │   │   │   ├── Nav.java
+│   │   │   │   │   │   │   ├── PasswordUtil.java
+│   │   │   │   │   │   │   ├── PomodoroController.java
+│   │   │   │   │   │   │   ├── PomodoroState.java
+│   │   │   │   │   │   │   ├── ProfileController.java
+│   │   │   │   │   │   │   ├── SecurityQASetMissingOnly.java
+│   │   │   │   │   │   │   ├── SessionManager.java
+│   │   │   │   │   │   │   ├── SidebarBinder.java
+│   │   │   │   │   │   │   ├── SidebarHelper.java
+│   │   │   │   │   │   │   ├── SignupController.java
+│   │   │   │   │   │   │   ├── Task.java
+│   │   │   │   │   │   │   ├── TaskDAO.java
+│   │   │   │   │   │   │   ├── User.java
+│   │   │   │   │   │   │   ├── UserDao.java
+│   │   │   │   │   │   │   ├── chat.css
+│   │   │   │   │   │   │   ├── expenseController.java
+│   │   │   │   │   │   │   ├── picker.css
+│   │   │   │   │   │   │   ├── todoController.java
+│   │   │   │   │   │   │   └── chat/
+│   │   │   │   │   │   │   │   ├── ChatClient.java
+│   │   │   │   │   │   │   │   ├── ChatWindows.java
+│   │   │   │   │   │   │   │   ├── CourseChatController.java
+│   │   │   │   │   │   │   │   ├── Message.java
+│   │   │   │   │   │   │   └── chatserver/
+│   │   │   │   │   │   │   │   ├── ChatServer.java
+│   │   │   │   │   │   │   │   ├── ChatServerMain.java
+│   │   │   │   │   │   │   │   ├── CourseChatRepository.java
+│   │   │   │   │   │   │   └── rememberMe/
+│   │   │   │   │   │   │   │   ├── RememberMe.java
+│   │   │   │   │   │   │   │   ├── SecureStore.java
+│   │   │   │   │   │   │   └── util/
+│   │   │   │   │   │   │   │   ├── SoundFX.java
+│   │   │   │   │   │   │   │   ├── SoundForPomodoro.java
+│   │   │   └── resources/
+│   │   │   │   └── com/
+│   │   │   │   │   └── example/
+│   │   │   │   │   │   └── achievekit/
+│   │   │   │   │   │   │   ├── ButtonsCSS.css
+│   │   │   │   │   │   │   ├── ForgotPassword.css
+│   │   │   │   │   │   │   ├── ForgotPassword.fxml
+│   │   │   │   │   │   │   ├── Homepage.fxml
+│   │   │   │   │   │   │   ├── Homepagecss.css
+│   │   │   │   │   │   │   ├── Profile.css
+│   │   │   │   │   │   │   ├── Profile.fxml
+│   │   │   │   │   │   │   ├── StudyChat.css
+│   │   │   │   │   │   │   ├── StudyChat.fxml
+│   │   │   │   │   │   │   ├── StudyChatpicker.css
+│   │   │   │   │   │   │   ├── expense.fxml
+│   │   │   │   │   │   │   ├── expenseCSS.css
+│   │   │   │   │   │   │   ├── hello-view.fxml
+│   │   │   │   │   │   │   ├── login.fxml
+│   │   │   │   │   │   │   ├── loginCss.css
+│   │   │   │   │   │   │   ├── logo.png
+│   │   │   │   │   │   │   ├── pomodoroCSS.css
+│   │   │   │   │   │   │   ├── pomodoroPage.fxml
+│   │   │   │   │   │   │   ├── signup.fxml
+│   │   │   │   │   │   │   ├── signupCss.css
+│   │   │   │   │   │   │   ├── todo.fxml
+│   │   │   │   │   │   │   ├── todoCSS.css
+│   └── target/
+│   │   └── classes/
+│   │   │   ├── module-info.class
+│   │   │   └── com/
+│   │   │   │   └── example/
+│   │   │   │   │   └── achievekit/
+│   │   │   │   │   │   ├── AuthService.class
+│   │   │   │   │   │   ├── ButtonsCSS.css
+│   │   │   │   │   │   ├── DB.class
+│   │   │   │   │   │   ├── Expense.class
+│   │   │   │   │   │   ├── ExpenseDAO.class
+│   │   │   │   │   │   ├── ForgotPassword.css
+│   │   │   │   │   │   ├── ForgotPassword.fxml
+│   │   │   │   │   │   ├── ForgotPasswordController.class
+│   │   │   │   │   │   ├── HelloApplication.class
+│   │   │   │   │   │   ├── HelloController.class
+│   │   │   │   │   │   ├── HomeController$1.class
+│   │   │   │   │   │   ├── HomeController$ActivityItem.class
+│   │   │   │   │   │   ├── HomeController$CourseRow.class
+│   │   │   │   │   │   ├── HomeController.class
+│   │   │   │   │   │   ├── Homepage.fxml
+│   │   │   │   │   │   ├── Homepagecss.css
+│   │   │   │   │   │   ├── LoginController.class
+│   │   │   │   │   │   ├── Nav.class
+│   │   │   │   │   │   ├── PasswordUtil.class
+│   │   │   │   │   │   ├── PomodoroController$1.class
+│   │   │   │   │   │   ├── PomodoroController$2.class
+│   │   │   │   │   │   ├── PomodoroController$3.class
+│   │   │   │   │   │   ├── PomodoroController$4.class
+│   │   │   │   │   │   ├── PomodoroController$5.class
+│   │   │   │   │   │   ├── PomodoroController$HistoryItem.class
+│   │   │   │   │   │   ├── PomodoroController$MinutesSetter.class
+│   │   │   │   │   │   ├── PomodoroController.class
+│   │   │   │   │   │   ├── PomodoroState$Phase.class
+│   │   │   │   │   │   ├── PomodoroState$UiListener.class
+│   │   │   │   │   │   ├── PomodoroState.class
+│   │   │   │   │   │   ├── Profile.css
+│   │   │   │   │   │   ├── Profile.fxml
+│   │   │   │   │   │   ├── ProfileController.class
+│   │   │   │   │   │   ├── SessionManager.class
+│   │   │   │   │   │   ├── SidebarBinder.class
+│   │   │   │   │   │   ├── SidebarHelper.class
+│   │   │   │   │   │   ├── SignupController.class
+│   │   │   │   │   │   ├── StudyChat.css
+│   │   │   │   │   │   ├── StudyChat.fxml
+│   │   │   │   │   │   ├── StudyChatpicker.css
+│   │   │   │   │   │   ├── Task.class
+│   │   │   │   │   │   ├── TaskDAO.class
+│   │   │   │   │   │   ├── User.class
+│   │   │   │   │   │   ├── UserDao.class
+│   │   │   │   │   │   ├── expense.fxml
+│   │   │   │   │   │   ├── expenseCSS.css
+│   │   │   │   │   │   ├── expenseController$1.class
+│   │   │   │   │   │   ├── expenseController$CategoryDateResult.class
+│   │   │   │   │   │   ├── expenseController$EditDialogResult.class
+│   │   │   │   │   │   ├── expenseController.class
+│   │   │   │   │   │   ├── hello-view.fxml
+│   │   │   │   │   │   ├── login.fxml
+│   │   │   │   │   │   ├── loginCss.css
+│   │   │   │   │   │   ├── logo.png
+│   │   │   │   │   │   ├── pomodoroCSS.css
+│   │   │   │   │   │   ├── pomodoroPage.fxml
+│   │   │   │   │   │   ├── signup.fxml
+│   │   │   │   │   │   ├── signupCss.css
+│   │   │   │   │   │   ├── todo.fxml
+│   │   │   │   │   │   ├── todoCSS.css
+│   │   │   │   │   │   ├── todoController$1.class
+│   │   │   │   │   │   ├── todoController.class
+│   │   │   │   │   │   └── chat/
+│   │   │   │   │   │   │   ├── ChatClient.class
+│   │   │   │   │   │   │   ├── ChatWindows.class
+│   │   │   │   │   │   │   ├── CourseChatController$1.class
+│   │   │   │   │   │   │   ├── CourseChatController.class
+│   │   │   │   │   │   │   ├── Message$Type.class
+│   │   │   │   │   │   │   ├── Message.class
+│   │   │   │   │   │   └── chatserver/
+│   │   │   │   │   │   │   ├── ChatServer$ClientHandler.class
+│   │   │   │   │   │   │   ├── ChatServer.class
+│   │   │   │   │   │   │   ├── ChatServerMain.class
+│   │   │   │   │   │   │   ├── CourseChatRepository.class
+│   │   │   │   │   │   └── rememberMe/
+│   │   │   │   │   │   │   ├── RememberMe.class
+│   │   │   │   │   │   │   ├── SecureStore.class
+│   │   │   │   │   │   └── util/
+│   │   │   │   │   │   │   ├── SoundFX.class
+│   │   │   │   │   │   │   ├── SoundForPomodoro.class
+│   │   └── generated-sources/
+│   │   │   └── annotations/

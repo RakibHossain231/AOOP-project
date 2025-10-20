@@ -1,0 +1,111 @@
+#loginWindow {
+    -fx-background-color: linear-gradient(to bottom right, #000000, #1a1a1a, #2d2d2d, #3a3a3a);
+    -fx-padding: 40;
+}
+/* Login Card */
+#loginCard {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-padding: 40;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 6);
+}
+
+/* Logo/Icon Placeholder */
+#loginLogo {
+    -fx-background-color: #fbbf24;
+    -fx-background-radius: 50%;
+    -fx-min-width: 60;
+    -fx-min-height: 60;
+    -fx-max-width: 60;
+    -fx-max-height: 60;
+    -fx-alignment: center;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+/* Divider */
+#divider {
+    -fx-background-color: rgba(255, 193, 7, 0.2);
+    -fx-min-height: 1;
+    -fx-max-height: 1;
+    -fx-pref-width: 100%;
+}
+
+/* Login Button Hover Glow */
+#loginBtn:hover {
+    -fx-background-color: #f59e0b;
+    -fx-effect: dropshadow(gaussian, rgba(255,193,7,0.4), 15, 0, 0, 0);
+}
+
+/* Subtle Pattern on Background */
+#loginWindow {
+    -fx-background-color: linear-gradient(to bottom right, #000000, #1a1a1a, #2d2d2d, #3a3a3a);
+    -fx-padding: 40;
+    -fx-background-insets: 0;
+    -fx-background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAnsB+XL9uNcAAAAASUVORK5CYII=");
+    -fx-background-repeat: repeat;
+    -fx-background-opacity: 0.05;
+}
+#loginTitle {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+#loginSubtitle {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 14px;
+}
+
+#usernameField, #passwordField {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #9ca3af;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: rgba(255, 193, 7, 0.2);
+    -fx-border-width: 1;
+    -fx-padding: 10 14;
+    -fx-font-size: 14px;
+}
+
+#usernameField:focused, #passwordField:focused {
+    -fx-border-color: #fbbf24;
+    -fx-background-color: rgba(255,255,255,0.15);
+}
+
+#loginBtn {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+    -fx-min-width: 160;
+}
+
+#loginBtn:hover {
+    -fx-background-color: #f59e0b;
+}
+
+#forgotPassword, #signupLink {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+#forgotPassword:hover, #signupLink:hover {
+    -fx-text-fill: #fbbf24;
+}
+
+#rememberMe {
+    -fx-text-fill: #d1d5db;
+    -fx-font-size: 12px;
+}

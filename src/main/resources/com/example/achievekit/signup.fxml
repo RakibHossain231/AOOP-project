@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.achievekit.SignupController"
+      alignment="CENTER" spacing="10" prefWidth="420" prefHeight="520" stylesheets="@signupCss.css">
+
+    <children>
+
+        <!-- Logo -->
+        <Label text="AK" fx:id="signupLogo"/>
+
+        <!-- Title -->
+        <Label text="AchieveKIT" fx:id="signupTitle"/>
+        <Label fx:id="signupSubtitle"
+               text="Create your AchieveKIT account. Use a valid email and strong password."
+               wrapText="true" maxWidth="500"/>
+
+        <!-- Inputs -->
+        <TextField fx:id="usernameField" promptText="Username"/>
+        <TextField fx:id="fullNameField" promptText="Full Name"/>
+        <TextField fx:id="emailField" promptText="Email"/>
+        <PasswordField fx:id="passwordField" promptText="Password (min 8 chars)"/>
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirm password"/>
+
+        <!-- Divider -->
+        <Rectangle fx:id="divider"/>
+
+        <!-- Signup Button -->
+        <Button fx:id="signupBtn" text="Sign Up" onAction="#onSignupClicked"/>
+
+        <!-- Login Button -->
+        <Button fx:id="cancelBtn" text="Already have an account? Log in" onAction="#onCancelClicked"/>
+
+    </children>
+    <padding>
+        <Insets topRightBottomLeft="16"/>
+    </padding>
+</VBox>

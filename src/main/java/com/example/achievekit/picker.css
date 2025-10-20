@@ -1,0 +1,56 @@
+/* Root VBox of the dialog */
+.dialog-root {
+    -fx-background-color: #1f2937;
+    -fx-background-radius: 12;
+}
+
+/* Title label */
+.dialog-root > Label {
+    -fx-text-fill: #fbbf24;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ListView */
+.ak-list {
+    -fx-background-color: #111827;
+    -fx-control-inner-background: #1f2937;
+    -fx-border-color: rgba(255,193,7,0.3);
+    -fx-border-radius: 8;
+}
+
+.ak-list .list-cell {
+    -fx-text-fill: #d1d5db;
+}
+
+.ak-list .list-cell:selected {
+    -fx-background-color: rgba(255,193,7,0.2);
+    -fx-text-fill: #ffffff;
+}
+
+/* Buttons */
+.ak-btn {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.ak-btn.primary-btn {
+    -fx-background-color: #fbbf24;
+    -fx-text-fill: #111827;
+}
+
+.ak-btn.primary-btn:hover {
+    -fx-background-color: #ffc107;
+}
+
+.ak-btn.ghost-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #fbbf24;
+    -fx-text-fill: #fbbf24;
+}
+
+.ak-btn.ghost-btn:hover {
+    -fx-background-color: rgba(255,193,7,0.2);
+}

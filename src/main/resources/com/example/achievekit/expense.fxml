@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.achievekit.expenseController"
+            stylesheets="@pomodoroCSS.css">
+
+    <!-- ================= Sidebar ================= -->
+    <left>
+        <!-- ScrollPane-কে transparent রাখার জন্য styleClass="sidebar-scroll" -->
+        <ScrollPane prefWidth="280.0"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="ALWAYS"
+                    styleClass="sidebar-scroll">
+            <content>
+                <VBox prefWidth="280.0" styleClass="sidebar">
+                    <children>
+
+                        <!-- Sidebar Header -->
+                        <VBox styleClass="sidebar-header">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                    <children>
+                                        <Label styleClass="logo-icon" text="📚"/>
+                                        <VBox>
+                                            <children>
+                                                <Label styleClass="logo-text" text="AchieveKIT"/>
+                                                <Label styleClass="logo-subtitle" text="Productivity Hub"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <!-- User Profile Section -->
+                        <VBox styleClass="user-profile" fx:id="profileBox">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                    <children>
+                                        <!-- প্রথম অক্ষরের অ্যাভাটার -->
+                                        <Label styleClass="user-avatar" fx:id="avatarLabel" text="U"/>
+                                        <VBox>
+                                            <children>
+                                                <Label styleClass="user-name" fx:id="sidebarName" text="John Student"/>
+                                                <Label styleClass="user-status" fx:id="sidebarSubtext" text="Premium Member"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <!-- Main Navigation Menu -->
+                        <VBox styleClass="nav-menu">
+                            <children>
+                                <Button fx:id="dashboardBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0"
+                                        mnemonicParsing="false" onAction="#showDashboard" prefWidth="240.0"
+                                        styleClass="nav-item,nav-item-active" text="🏠 Dashboard"/>
+                                <Button fx:id="pomodoroBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0"
+                                        mnemonicParsing="false" onAction="#showPomodoro" prefWidth="240.0" styleClass="nav-item"
+                                        text="🍅 Pomodoro Timer"/>
+                                <Button fx:id="tasksBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false"
+                                        onAction="#showTasks" prefWidth="240.0" styleClass="nav-item" text="✅ Task Manager"/>
+                                <Button fx:id="expensesBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0"
+                                        mnemonicParsing="false" onAction="#showExpenses" prefWidth="240.0" styleClass="nav-item"
+                                        text="💰 Expense Tracker"/>
+                                <Button fx:id="chatBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false"
+                                        onAction="#showChat" prefWidth="240.0" styleClass="nav-item" text="💬 Study Chat"/>
+
+                                <!-- Separator -->
+                                <Separator styleClass="nav-separator">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+                                    </VBox.margin>
+                                </Separator>
+
+<!--                                &lt;!&ndash; Secondary Menu &ndash;&gt;-->
+<!--                                <Button fx:id="analyticsBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0"-->
+<!--                                        mnemonicParsing="false" onAction="#showAnalytics" prefWidth="240.0"-->
+<!--                                        styleClass="nav-item" text="📊 Analytics"/>-->
+<!--                                <Button fx:id="settingsBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0"-->
+<!--                                        mnemonicParsing="false" onAction="#showSettings" prefWidth="240.0" styleClass="nav-item"-->
+<!--                                        text="⚙️ Settings"/>-->
+<!--                                <Button fx:id="tipsBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false"-->
+<!--                                        onAction="#showTips" prefWidth="240.0" styleClass="nav-item" text="💡 Study Tips"/>-->
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+                            </padding>
+                        </VBox>
+
+                        <!-- ফাঁকা স্পেস: জায়গা থাকলে ফুটার নিচে থাকবে -->
+                        <Region VBox.vgrow="ALWAYS"/>
+
+                        <!-- Sidebar Footer -->
+                        <VBox styleClass="sidebar-footer">
+                            <children>
+                                <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="12.0"
+                                        mnemonicParsing="false" onAction="#logout" prefWidth="240.0" styleClass="nav-item"
+                                        text="🚪 Logout"/>
+                            </children>
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0"/>
+                            </padding>
+                        </VBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </left>
+
+    <!-- ================= Main Content ================= -->
+    <center>
+        <VBox styleClass="main-content">
+            <!-- Top Header -->
+            <HBox alignment="CENTER_LEFT" styleClass="top-header">
+                <VBox HBox.hgrow="ALWAYS">
+                    <Label fx:id="pageTitle" styleClass="page-title" text="Expense Tracker"/>
+                    <Label styleClass="page-subtitle" text="Manage and monitor your study expenses"/>
+                </VBox>
+<!--                <HBox alignment="CENTER_RIGHT" spacing="10.0">-->
+<!--                    <Button fx:id="settingsBtn2" mnemonicParsing="false" onAction="#openExpensesSettings" styleClass="header-btn" text="⚙️"/>-->
+<!--                    <Button fx:id="helpBtn" mnemonicParsing="false" onAction="#showExpensesHelp" styleClass="header-btn" text="❓"/>-->
+<!--                </HBox>-->
+                <padding>
+                    <Insets top="20.0" left="30.0" right="30.0" bottom="20.0"/>
+                </padding>
+            </HBox>
+
+            <!-- Expenses Content -->
+            <ScrollPane fitToWidth="true" styleClass="content-scroll" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox styleClass="expenses-content" spacing="30" >
+                        <padding>
+                            <Insets top="20" right="30" bottom="30" left="30"></Insets>
+                        </padding>
+                        <!-- Add Expense Form -->
+                        <VBox styleClass="expense-form" spacing="15">
+                            <Label styleClass="section-title" text="Add New Expense"/>
+                            <HBox spacing="15.0" styleClass="task-add-section" alignment="CENTER_LEFT" HBox.hgrow="NEVER"
+                                  maxWidth="600"
+                                  style="-fx-background-color: rgba(255, 193, 7, 0.1); -fx-background-radius: 12; -fx-padding: 15 14;" >
+                                <TextField fx:id="expenseNameField" promptText="Expense Name"/>
+                                <TextField fx:id="expenseAmountField" promptText="Amount"/>
+                                <TextField fx:id="expenseNotesField"  promptText="Notes (optional)"/>
+                                <Button fx:id="addExpenseBtn" mnemonicParsing="false" onAction="#addExpense" styleClass="control-btn" text="➕ Add"/>
+                            </HBox>
+                        </VBox>
+                        <!-- Last 7 Days Expense (Bar Chart) -->
+                        <VBox styleClass="expense-chart-section" spacing="15">
+                            <Label styleClass="section-title" text="Last 7 Days Expense"/>
+                            <BarChart fx:id="weeklyExpenseChart" prefHeight="300" prefWidth="600">
+                                <xAxis>
+                                    <CategoryAxis label="Day"/>
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis label="Amount"/>
+                                </yAxis>
+                            </BarChart>
+                        </VBox>
+
+                        <!-- Expense Table -->
+                        <VBox styleClass="expense-table-section">
+                            <Label styleClass="section-title" text="Expense History"/>
+                            <TableView fx:id="expenseTable" styleClass="session-table">
+                                <columns>
+                                    <TableColumn fx:id="expenseNameColumn" prefWidth="150.0" text="Name"/>
+                                    <TableColumn fx:id="expenseAmountColumn" prefWidth="100.0" text="Amount"/>
+                                    <TableColumn fx:id="expenseDateColumn" prefWidth="120.0" text="Date"/>
+                                    <TableColumn fx:id="expenseCategoryColumn" prefWidth="120.0" text="Category"/>
+                                    <TableColumn fx:id="expenseNotesColumn" prefWidth="200.0" text="Notes"/>
+                                    <TableColumn fx:id="expenseActionColumn" prefWidth="100.0" text="Action"/>
+                                </columns>
+                            </TableView>
+
+                            <!-- Empty State -->
+                            <VBox fx:id="emptyExpenseState" alignment="CENTER" styleClass="empty-state" visible="false">
+                                <Label styleClass="empty-icon" text="💰"/>
+                                <Label styleClass="empty-title" text="No expenses yet"/>
+                                <Label styleClass="empty-subtitle" text="Add an expense to see it listed here"/>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </center>
+    <styleClass>
+        <String fx:value="main-window"/>
+    </styleClass>
+</BorderPane>

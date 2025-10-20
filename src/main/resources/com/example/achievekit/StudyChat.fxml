@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.String?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.achievekit.chat.CourseChatController"
+            stylesheets="@StudyChat.css">
+
+    <!-- Top Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="topbar" spacing="12">
+            <children>
+                <Label fx:id="titleLabel" text="💬 Study Chat" styleClass="page-title"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Label fx:id="statusLabel" text="Disconnected" styleClass="chip"/>
+                <Button fx:id="connectBtn" text="Connect" onAction="#onConnect" styleClass="ak-btn"/>
+                <Button fx:id="disconnectBtn" text="Disconnect" onAction="#onDisconnect" styleClass="ak-btn" disable="true"/>
+            </children>
+            <padding><Insets top="14" right="20" bottom="12" left="20"/></padding>
+        </HBox>
+    </top>
+
+    <!-- Card -->
+    <center>
+        <StackPane styleClass="page-wrap">
+            <BorderPane styleClass="chat-card" maxWidth="1180">
+                <top>
+                    <HBox alignment="CENTER_LEFT" spacing="10" styleClass="roombar">
+                        <children>
+                            <Label text="📚 Course:" styleClass="muted"/>
+                            <Label fx:id="courseNameLabel" />
+                            <Pane HBox.hgrow="ALWAYS"/>
+                            <Label fx:id="userLabel" styleClass="muted"/>
+                        </children>
+                        <padding><Insets top="10" right="14" bottom="10" left="14"/></padding>
+                    </HBox>
+                </top>
+
+                <center>
+                    <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS"
+                                styleClass="content-scroll">
+                        <content>
+                            <VBox fx:id="messagesBox" spacing="8" styleClass="messages-box"/>
+                        </content>
+                    </ScrollPane>
+                </center>
+
+                <bottom>
+                    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="composer">
+                        <children>
+                            <TextField fx:id="messageField" promptText="Write a message..." HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="sendBtn" text="Send" onAction="#onSend" disable="true" styleClass="send-btn"/>
+                        </children>
+                        <padding><Insets top="12" right="14" bottom="14" left="14"/></padding>
+                    </HBox>
+                </bottom>
+            </BorderPane>
+        </StackPane>
+    </center>
+
+    <styleClass>
+        <String fx:value="main-window"/>
+    </styleClass>
+</BorderPane>

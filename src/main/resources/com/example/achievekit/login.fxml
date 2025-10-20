@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox fx:id="loginWindow" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.achievekit.LoginController"
+      alignment="CENTER" stylesheets="@loginCss.css"
+      prefWidth="400" prefHeight="550">
+
+    <VBox fx:id="loginCard" spacing="20" alignment="CENTER">
+        <Label text="AK" fx:id="loginLogo"/>
+        <Label text="AchieveKIT" fx:id="loginTitle"/>
+        <Label text="Welcome back! Please login." fx:id="loginSubtitle"/>
+
+        <TextField fx:id="usernameField" promptText="Username or Email"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+
+        <Rectangle fx:id="divider"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <CheckBox text="Remember Me" fx:id="rememberMe"/>
+            <Label text="Forgot Password?" fx:id="forgotPassword" onMouseClicked="#onForgotPassword"/>
+        </HBox>
+
+        <Label fx:id="errorMsg" text=""/>
+
+        <Button text="Login" fx:id="loginBtn" onAction="#onLogin"/>
+
+        <Label text="Don’t have an account? Sign up" fx:id="signupLink" onMouseClicked="#onGoSignup"/>
+    </VBox>
+</VBox>

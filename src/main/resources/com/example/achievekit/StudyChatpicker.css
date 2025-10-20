@@ -1,0 +1,91 @@
+/* AchieveKIT - Course Picker Dialog (dark+gold) */
+
+.root, .dialog-root {
+    -ak-bg:            #0e0f11;
+    -ak-surface:       #151618;
+    -ak-surface-2:     #1b1c1f;
+    -ak-surface-3:     #222326;
+    -ak-border:        rgba(240,198,84,.16);
+    -ak-border-2:      rgba(240,198,84,.28);
+    -ak-gold:          #d9b043;
+    -ak-gold-hi:       #f0c95f;
+    -ak-text:          #eef2f6;
+    -ak-muted:         #aeb5bb;
+    -ak-shadow:        rgba(0,0,0,.40);
+}
+
+.dialog-root {
+    -fx-background-color: linear-gradient(to bottom, -ak-surface-2, -ak-surface);
+    -fx-border-color: -ak-border;
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+
+.dialog-root > .label {
+    -fx-text-fill: -ak-muted;
+    -fx-font-weight: 800;
+    -fx-padding: 0 2 6 2;
+}
+
+/* ListView themed */
+.ak-list {
+    -fx-background-color: -ak-surface;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 10;
+}
+.ak-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -ak-text;
+    -fx-padding: 10 12;
+    -fx-cell-size: 34px;
+}
+.ak-list .list-cell:odd  { -fx-background-color: #181a1d; }
+.ak-list .list-cell:even { -fx-background-color: #1d1f22; }
+.ak-list .list-cell:filled:selected,
+.ak-list .list-cell:filled:selected:hover {
+    -fx-background-color: rgba(240,198,84,.22);
+    -fx-text-fill: -ak-text;
+}
+.ak-list .list-cell:filled:hover {
+    -fx-background-color: rgba(240,198,84,.10);
+}
+
+/* Scrollbar */
+.ak-list .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(240,198,84,.65);
+    -fx-background-radius: 6;
+}
+.ak-list .scroll-bar:vertical .track {
+    -fx-background-color: rgba(240,198,84,.12);
+    -fx-background-radius: 6;
+}
+
+/* Buttons (re-use tokens; classes already set from code) */
+.ak-btn {
+    -fx-background-color: -ak-surface-3;
+    -fx-text-fill: -ak-text;
+    -fx-padding: 8 14;
+    -fx-background-radius: 12;
+    -fx-font-weight: 800;
+    -fx-border-color: -ak-border;
+    -fx-border-radius: 12;
+}
+.ak-btn:hover { -fx-background-color: derive(-ak-surface-3, 8%); }
+
+.primary-btn {
+    -fx-background-color: linear-gradient(to bottom, -ak-gold-hi, -ak-gold);
+    -fx-text-fill: #171717;
+    -fx-font-weight: 900;
+    -fx-padding: 8 16;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, -ak-shadow, 14, .35, 0, 3);
+}
+.primary-btn:hover { -fx-opacity: .95; }
+.ghost-btn { /* already themed by ak-btn */ }
+
+/* Label color inside default dialogs (if any pop) */
+.label { -fx-text-fill: -ak-text; }
