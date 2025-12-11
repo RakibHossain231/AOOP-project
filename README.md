@@ -15,8 +15,6 @@ A quick overview of your daily productivity, including:
 - Recent messages  
 - Activity highlights  
 
----
-
 ### 🍅 Pomodoro Timer  
 A focused study timer with:  
 - Single-task or multi-task selection  
@@ -26,8 +24,6 @@ A focused study timer with:
 
 Perfect for structured study sessions.
 
----
-
 ### 📝 Task Manager  
 Helps organize daily and long-term tasks:  
 - Add tasks with due dates  
@@ -35,15 +31,11 @@ Helps organize daily and long-term tasks:
 - Mark as complete or delete  
 - Visible in dashboard summary  
 
----
-
 ### 💰 Expense Tracker  
 A simple way to track academic or daily expenses:  
 - Add expenses with name, amount & notes  
 - 7-day spending visualization  
 - Editable expense history  
-
----
 
 ### 💬 Study Chat  
 A lightweight messaging system for course discussions:  
